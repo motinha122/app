@@ -1,12 +1,20 @@
 <template>
-
-    <h1 :class="classVar">Xampson</h1>
-
-    <div v-for="obj in todos" :key="obj.id" class="todo-list">
-        <img :src="imgSrc" :alt="obj.id" class="imagem">
-        {{ obj.title }}
+    <div>
+        <div>
+            Form
+        </div>
+        <input v-model="name" type="text">
+        <br>
+        {{name}}
     </div>
-
+    <div>
+        <label>Carros</label><br>
+        <input type="checkbox" v-model="cars" value="golf">Golf
+        <input type="checkbox" v-model="cars" value="passat">Passat
+        <input type="checkbox" v-model="cars" value="jetta">Jetta
+        <br>
+        {{cars}}
+    </div>
 </template>
 
 <script>
@@ -14,41 +22,8 @@
 export default {
     data() {
         return {
-            imgSrc: 'https://64.media.tumblr.com/1940b890b307230e03c25e268fc0f75c/8b597d0c402a4868-08/s1280x1920/2261a542cf1673efcab1a5ae9e4687e0afce4d03.jpg',
-            imgAlt: '1',
-            classVar: 'title',
-            todos: [
-                {
-                    "userId": 1,
-                    "id": 1,
-                    "title": "delectus aut autem",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 2,
-                    "title": "quis ut nam facilis et officia qui",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 3,
-                    "title": "fugiat veniam minus",
-                    "completed": false
-                },
-                {
-                    "userId": 1,
-                    "id": 4,
-                    "title": "et porro tempora",
-                    "completed": true
-                },
-                {
-                    "userId": 1,
-                    "id": 5,
-                    "title": "laboriosam mollitia et enim quasi adipisci quia provident illum",
-                    "completed": false
-                }
-            ]
+            name:'',
+            cars:[],
         }
     }
 
@@ -57,23 +32,5 @@ export default {
 </script>
 
 <style>
-.title{
-    color: #567;
-}
 
-.imagem{
-    width: 100px;
-}
-
-.todo-list {
-    background-color: #000;
-    color: #ffffff;
-    margin-bottom: 5px;
-}
-
-.header {
-    background: #000;
-    color: aliceblue;
-
-}
 </style>
