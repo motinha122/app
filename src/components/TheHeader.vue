@@ -1,7 +1,9 @@
 <template>
 
-    <div v-for="obj in todos" v-bind:key="obj.id" class="todo-list">
-        <img v-bind:src="imgSrc" v-bind:alt="imgAlt" class="imagem">
+    <h1 :class="classVar">Xampson</h1>
+
+    <div v-for="obj in todos" :key="obj.id" class="todo-list">
+        <img :src="imgSrc" :alt="obj.id" class="imagem">
         {{ obj.title }}
     </div>
 
@@ -14,6 +16,7 @@ export default {
         return {
             imgSrc: 'https://64.media.tumblr.com/1940b890b307230e03c25e268fc0f75c/8b597d0c402a4868-08/s1280x1920/2261a542cf1673efcab1a5ae9e4687e0afce4d03.jpg',
             imgAlt: '1',
+            classVar: 'title',
             todos: [
                 {
                     "userId": 1,
@@ -54,6 +57,10 @@ export default {
 </script>
 
 <style>
+.title{
+    color: #567;
+}
+
 .imagem{
     width: 100px;
 }
