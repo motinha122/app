@@ -1,19 +1,8 @@
 <template>
     <div>
-        <div>
-            Form
-        </div>
-        <input v-model="name" type="text">
-        <br>
-        {{name}}
-    </div>
-    <div>
-        <label>Carros</label><br>
-        <input type="checkbox" v-model="cars" value="golf">Golf
-        <input type="checkbox" v-model="cars" value="passat">Passat
-        <input type="checkbox" v-model="cars" value="jetta">Jetta
-        <br>
-        {{cars}}
+        <button @click="onClick()">
+            Xampson
+        </button>
     </div>
 </template>
 
@@ -22,11 +11,15 @@
 export default {
     data() {
         return {
-            name:'',
-            cars:[],
+
+        }
+    },
+
+    methods:{
+        onClick(){
+            console.log('1');
         }
     }
-
 }
 
 </script>
