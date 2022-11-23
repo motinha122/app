@@ -1,24 +1,21 @@
 <template>
 
-  <TheHeader></TheHeader>
+  <VModel></VModel>
 
 </template>
 
 <script>
 
-import TheHeader from './components/TheHeader.vue';
-
+import VModel from './components/VModel.vue';
 
 export default {
   name: 'App',
   components: {
-    TheHeader
+    VModel
   },
   data(){
     return{
-      showHeader: true,
-      name: 'xampson',
-      acessLevel: 'admin',
+
     }
   }
 }
@@ -27,8 +24,10 @@ export default {
 
 <style>
 
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Jost', Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
