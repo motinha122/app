@@ -1,11 +1,24 @@
 <template>
     <div>
         {{ fullname }}
-    </div>
-    <div v-for="todo in todos" :key="todo.id">
+    </div><br>
+
+    <h2>Todo em Aberto</h2>
+    <div v-for="todo in uncompletedTodos" :key="todo.id">
         {{todo.title}}
-        <span>{{todo.completed}}</span>
     </div>
+    
+    <h2>Todo Fechado</h2>
+    <div v-for="todo in completedTodos" :key="todo.id">
+        {{todo.title}}
+    </div>
+    
+    <h2>Todos</h2>
+    <div v-for="todo in todos" :key="todo.id">
+        <input type="checkbox" v-model="todo.completed">
+        {{todo.title}}
+    </div>
+
 </template>
  
 <script>
@@ -52,14 +65,17 @@ export default {
         }
     },
     methods: {
-
+        
     },
     computed: {
         fullname() {
-            return `${this.user.firstName} ${this.user.lastName}`
+            return `${this.user.firstName} ${this.user.lastName}`;
         },
         uncompletedTodos(){
-            return this.todos
+            return this.todos.filter(todo=>!todo.completed); //completed: false
+        },
+        completedTodos(){
+            return this.todos.filter(todo=>todo.completed); //completed: true
         }
     }
 }
