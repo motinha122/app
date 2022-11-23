@@ -1,17 +1,17 @@
 <template>
 
-  <VonEvent></VonEvent>
+  <CompProp></CompProp>
 
 </template>
 
 <script>
-import VonEvent from './components/VonEvent.vue';
+import CompProp from './components/CompProp.vue';
 
 
 export default {
   name: 'App',
   components: {
-    VonEvent
+    CompProp
   },
   data() {
     return {
