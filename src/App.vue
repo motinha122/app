@@ -1,20 +1,20 @@
 <template>
 
-  <VModel></VModel>
+  <VonEvent></VonEvent>
 
 </template>
 
 <script>
+import VonEvent from './components/VonEvent.vue';
 
-import VModel from './components/VModel.vue';
 
 export default {
   name: 'App',
   components: {
-    VModel
+    VonEvent
   },
-  data(){
-    return{
+  data() {
+    return {
 
     }
   }
@@ -23,7 +23,6 @@ export default {
 </script>
 
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 #app {
@@ -33,5 +32,4 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
-
 </style>
