@@ -11,14 +11,14 @@
 export default {
     data() {
         return {
-            
+
         }
     },
 
     methods:{
         onClick(){
             console.log('1');
-        }
+        },
     }
 }
 
