@@ -1,17 +1,17 @@
 <template>
 
-  <CompProp></CompProp>
+  <WatchComp></WatchComp>
 
 </template>
 
 <script>
-import CompProp from './components/CompProp.vue';
+import WatchComp from './components/WatchComp.vue';
 
 
 export default {
   name: 'App',
   components: {
-    CompProp
+    WatchComp
   },
   data() {
     return {
