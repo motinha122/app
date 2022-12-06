@@ -1,29 +1,19 @@
 <template>
-  <TheHeader v-if="showHeader">
-    <template v-slot:title>
-      Title
-    </template>
-    <template v-slot:description>
-      Description
-    </template>
-  </TheHeader>
-  <LifeCycle></LifeCycle>
-  <button @click="showHeader = !showHeader">Show Header</button>
+  <div class="card">Teste</div>
+  <BaseCard></BaseCard>
 </template>
 
 <script>
-import LifeCycle from './components/LifeCycle.vue';
-import TheHeader from './components/TheHeader.vue';
+import BaseCard from '@/components/BaseCard.vue';
 
 export default {
   name: 'App',
   components: {
-    LifeCycle,
-    TheHeader
+    BaseCard
 },
   data() {
     return {
-      showHeader: true,
+
     }
   }
 }
