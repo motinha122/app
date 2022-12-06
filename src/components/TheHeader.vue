@@ -1,7 +1,11 @@
 <template>
-    <div class="bar">
-        Header
-    </div>
+    <header class="bar">
+        <slot></slot>  
+        <h1 class="title">
+            <slot name="title"></slot>
+        </h1>
+        <slot name="description"></slot>
+    </header>
 </template>
 
 <script>

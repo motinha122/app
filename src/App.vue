@@ -1,5 +1,12 @@
 <template>
-  <TheHeader v-if="showHeader"></TheHeader>
+  <TheHeader v-if="showHeader">
+    <template v-slot:title>
+      Title
+    </template>
+    <template v-slot:description>
+      Description
+    </template>
+  </TheHeader>
   <LifeCycle></LifeCycle>
   <button @click="showHeader = !showHeader">Show Header</button>
 </template>
@@ -16,7 +23,7 @@ export default {
 },
   data() {
     return {
-      showHeader: false,
+      showHeader: true,
     }
   }
 }
