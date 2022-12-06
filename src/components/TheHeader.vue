@@ -1,8 +1,6 @@
 <template>
-    <div>
-        <button @click="onClick()">
-            Xampson
-        </button>
+    <div class="bar">
+        Header
     </div>
 </template>
 
@@ -14,16 +12,13 @@ export default {
 
         }
     },
-
-    methods:{
-        onClick(){
-            console.log('1');
-        },
-    }
 }
 
 </script>
 
 <style>
-
+.bar{
+    color: white;
+    background-color: black;
+}
 </style>

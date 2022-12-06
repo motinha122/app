@@ -1,21 +1,22 @@
 <template>
-
-  <WatchComp></WatchComp>
-
+  <TheHeader v-if="showHeader"></TheHeader>
+  <LifeCycle></LifeCycle>
+  <button @click="showHeader = !showHeader">Show Header</button>
 </template>
 
 <script>
-import WatchComp from './components/WatchComp.vue';
-
+import LifeCycle from './components/LifeCycle.vue';
+import TheHeader from './components/TheHeader.vue';
 
 export default {
   name: 'App',
   components: {
-    WatchComp
-  },
+    LifeCycle,
+    TheHeader
+},
   data() {
     return {
-
+      showHeader: false,
     }
   }
 }
