@@ -1,19 +1,22 @@
 <template>
-  <div class="card">Teste</div>
-  <BaseCard></BaseCard>
+  <div class="card"></div>
+  <PropsAlert :variant='variant'>
+    {{text}}
+  </PropsAlert>
 </template>
 
 <script>
-import BaseCard from '@/components/BaseCard.vue';
+import PropsAlert from '@/components/PropsAlert.vue';
 
 export default {
   name: 'App',
   components: {
-    BaseCard
-},
+    PropsAlert
+  },
   data() {
     return {
-
+      variant:'success',
+      text:'Formulário enviado com sucesso!'
     }
   }
 }
@@ -21,6 +24,7 @@ export default {
 </script>
 
 <style>
+
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 #app {
