@@ -1,12 +1,22 @@
 <template>
     <div :class="baseClass">
         <slot></slot>
+        {{test}}
     </div>
 </template>
 
 <script>
 export default {
-    props: ['variant'],
+    props: {
+        variant:{
+            type:String,
+            default: ''
+        },
+        test:{
+            type: String,
+            default:'test'
+        },
+    },
     computed: {
         baseClass() { // return 'alert alert-variant' or 'alert'
             return [
