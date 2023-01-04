@@ -9,8 +9,8 @@
     <br>
     <input type="text" v-model="user.lastName">
     <br>
-    {{user.firstName}}
-    {{user.lastName}}
+    {{ user.firstName }}
+    {{ user.lastName }}
     <br><br><br>
 
     <select v-model="pageCount">
@@ -28,34 +28,34 @@ export default {
         return {
             name: '',
             pageCount: 5,
-            user:{
-                firstName:'',
-                lastName:'',
+            user: {
+                firstName: '',
+                lastName: '',
             },
         }
     },
     watch: {
-        name(value){
-            if(value.length>= 5){
+        name(value) {
+            if (value.length >= 5) {
                 this.saveUserName();
             }
         },
-        pageCount(){
+        pageCount() {
             this.changePage();
         },
-        user:{
-            handler(){
+        user: {
+            handler() {
                 console.log('User changed');
             },
             deep: true, //watches if any key changes in the object 
         }
     },
     methods: {
-        saveUserName(){
+        saveUserName() {
             console.log("Saved");
             console.log(this.name);
         },
-        changePage(){
+        changePage() {
             console.log("ChangePage");
         },
     },
