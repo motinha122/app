@@ -1,22 +1,29 @@
 <template>
   <div class="card"></div>
-  <PropsAlert :variant='variant'>
+  <EmitAlert :variant='variant' @close="onClose()" v-if="showAlert" >
     {{text}}
-  </PropsAlert>
+  </EmitAlert>
 </template>
 
 <script>
-import PropsAlert from '@/components/PropsAlert.vue';
+import EmitAlert from '@/components/EmitAlert.vue';
 
 export default {
   name: 'App',
   components: {
-    PropsAlert
+    EmitAlert
   },
   data() {
     return {
+      showAlert:true,
       variant:'success',
       text:'Formulário enviado com sucesso!'
+    }
+  },
+  methods:{
+    onClose(){
+      this.showAlert = false;
+      console.log('close clickado');
     }
   }
 }
@@ -34,4 +41,5 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
 }
+
 </style>
