@@ -1,45 +1,33 @@
 <template>
-  <div class="card"></div>
-  <EmitAlert :variant='variant' @close="onClose()" v-if="showAlert" >
-    {{text}}
-  </EmitAlert>
+  <nav>
+    <router-link to="/">Home</router-link> |
+    <router-link to="/services">Services</router-link> |
+    <router-link to="/users">Users</router-link> |
+    <router-link to="/about">About</router-link>
+  </nav>
+  <router-view/>
 </template>
 
-<script>
-import EmitAlert from '@/components/EmitAlert.vue';
-
-export default {
-  name: 'App',
-  components: {
-    EmitAlert
-  },
-  data() {
-    return {
-      showAlert:true,
-      variant:'success',
-      text:'Formulário enviado com sucesso!'
-    }
-  },
-  methods:{
-    onClose(){
-      this.showAlert = false;
-      console.log('close clickado');
-    }
-  }
-}
-
-</script>
-
 <style>
-
 @import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 #app {
-  font-family: 'Jost', Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Jost' ,Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  margin-top: 60px;
 }
 
+nav {
+  padding: 30px;
+}
+
+nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+nav a.router-link-exact-active {
+  color: #42b983;
+}
 </style>
