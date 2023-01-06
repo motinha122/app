@@ -22,6 +22,7 @@ export default {
 
 <style>
 .bar {
+    
     color: white;
     background-color: black;
 }
